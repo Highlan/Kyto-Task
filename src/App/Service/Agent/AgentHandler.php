@@ -25,7 +25,7 @@ class AgentHandler
         }
     }
 
-    public function handleInput() //: IInput
+    public function handleInput()
     {
         try{
             $agent = (new AgentFactory)->build($this->agent);
