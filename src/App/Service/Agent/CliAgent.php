@@ -17,7 +17,6 @@ class CliAgent implements IAgent
 
     public function getInput()
     {
-        // TODO: Implement getInput() method.
-        return 1;
+        return $this->command->get();
     }
 }
