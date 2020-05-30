@@ -2,6 +2,9 @@
 require __DIR__ .'/vendor/autoload.php';
 require 'app/config/config.php';
 
+use App\Service\Agent\AgentHandler;
 
-$app = new Application();
+
+$handler = new AgentHandler();
+$app = new Application($handler);
 $app->run();

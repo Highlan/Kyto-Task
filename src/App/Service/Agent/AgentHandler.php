@@ -3,6 +3,9 @@
 namespace App\Service\Agent;
 
 
+use App\Service\IInput;
+use App\View\IView;
+
 class AgentHandler
 {
     const AGENT_CLI = 'Cli';
@@ -20,6 +23,16 @@ class AgentHandler
         {
             $this->agent = self::AGENT_WEB;
         }
+    }
+
+    public function handleInput()//: IInput
+    {
+        return 5;
+    }
+
+    public function handleOutput()//: IView
+    {
+
     }
 
 }
