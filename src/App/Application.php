@@ -10,6 +10,7 @@ class Application
     {
         $this->agent = $agent;
         $this->input = $this->agent->handleInput();
+        echo $this->input;
 
     }
 

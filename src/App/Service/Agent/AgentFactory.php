@@ -3,6 +3,9 @@
 namespace App\Service\Agent;
 
 
+use App\Command\GetInput;
+use App\FakeData;
+
 class AgentFactory
 {
     public function build ($type = '') : IAgent
@@ -29,10 +32,10 @@ class AgentFactory
 
     public function createCliAgent(): CliAgent
     {
-        return new CliAgent();
+        return new CliAgent(new GetInput());
     }
     public function createWebAgent(): WebAgent
     {
-        return new WebAgent();
+        return new WebAgent(new FakeData());
     }
 }

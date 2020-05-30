@@ -25,9 +25,16 @@ class AgentHandler
         }
     }
 
-    public function handleInput()//: IInput
+    public function handleInput() //: IInput
     {
-        return 5;
+        try{
+            $agent = (new AgentFactory)->build($this->agent);
+            return $agent->getInput();
+        }
+        catch (\Exception $exception)
+        {
+            die($exception->getMessage());
+        }
     }
 
     public function handleOutput()//: IView
