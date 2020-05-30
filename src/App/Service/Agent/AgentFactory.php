@@ -4,7 +4,7 @@ namespace App\Service\Agent;
 
 
 use App\Command\GetInput;
-use App\FakeData;
+use App\Service\FakeData;
 
 class AgentFactory
 {
