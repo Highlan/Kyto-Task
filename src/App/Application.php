@@ -25,7 +25,7 @@ class Application
     {
         $drawer = new Drawer();
 
-        $diamond  = new Diamond($drawer, $this->input);
-//        $triangle = new Triangle($drawer, $this->input);
+//        $diamond  = new Diamond($drawer, $this->input);
+        $triangle = new Triangle($drawer, $this->input);
     }
 }

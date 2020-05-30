@@ -11,5 +11,5 @@ namespace App\Shape;
 
 interface ISymmetricalShape
 {
-    public function setLineCoordinate() : void;
+    public function setLineCoordinate($expansion_coefficient) : void;
 }
