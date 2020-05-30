@@ -5,6 +5,9 @@ namespace App\View;
 
 class CliViewRenderer implements IView
 {
+    public function open() : void
+    {
+    }
     public function renderNewLine() : string
     {
         return PHP_EOL;
@@ -12,5 +15,9 @@ class CliViewRenderer implements IView
     public function renderWhiteSpace() : string
     {
         return ' ';
+    }
+    public function close() : void
+    {
+        // TODO: Implement close() method.
     }
 }

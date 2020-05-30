@@ -16,6 +16,8 @@ class Drawer implements IDrawer
 
     public function line($length, $first_drawable_point, $last_drawable_point, $shape = 'X', $border_shape = null)
     {
+        $this->view->open();
+
         $pointer = 0;
 
         while ($pointer < $length) {
@@ -30,6 +32,8 @@ class Drawer implements IDrawer
             $pointer++;
         }
         yield $this->view->renderNewLine();
+
+        $this->view->close();
 
         return;
     }

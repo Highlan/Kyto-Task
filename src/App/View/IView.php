@@ -11,6 +11,8 @@ namespace App\View;
 
 interface IView
 {
+    public function open() : void;
+    public function close() : void;
     public function renderNewLine() : string;
     public function renderWhiteSpace() : string;
 }
