@@ -1,7 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Fatemeh
- * Date: 5/30/2020
- * Time: 12:51 PM
- */
+require __DIR__ .'/vendor/autoload.php';
+require 'app/config/config.php';
+
+
+$app = new Application();
+$app->run();
