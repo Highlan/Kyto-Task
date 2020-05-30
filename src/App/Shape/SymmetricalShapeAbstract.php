@@ -21,9 +21,9 @@ abstract class SymmetricalShapeAbstract implements IShape, ISymmetricalShape
         $this->drawer = $drawer;
     }
 
-    protected function drawLine($shape = 'X') : void
+    protected function drawLine($shape = 'X', $border_shape = null) : void
     {
-        foreach($this->drawer->line($this->shape_width, $this->line_first_drawable_point, $this->line_last_drawable_point, $shape) as $key => $value)
+        foreach($this->drawer->line($this->shape_width, $this->line_first_drawable_point, $this->line_last_drawable_point, $shape, $border_shape) as $key => $value)
         {
             echo $value;
         }
