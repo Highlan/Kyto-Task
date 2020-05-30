@@ -3,6 +3,7 @@
 use App\Service\Agent\AgentHandler;
 use App\Shape\Triangle;
 use App\Shape\Diamond;
+use App\Service\Drawer;
 
 
 class Application
@@ -22,7 +23,9 @@ class Application
 
     public function run()
     {
-        $diamond  = new Diamond($this->input);
-//        $triangle = new Triangle($this->input);
+        $drawer = new Drawer();
+
+        $diamond  = new Diamond($drawer, $this->input);
+//        $triangle = new Triangle($drawer, $this->input);
     }
 }

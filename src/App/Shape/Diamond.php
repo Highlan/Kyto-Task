@@ -3,13 +3,16 @@
 namespace App\Shape;
 
 
+use App\Service\Drawer;
+
 class Diamond extends SymmetricalShapeAbstract
 {
     private $shape_height;
 
 
-    public function __construct($height)
+    public function __construct(Drawer $drawer, $height)
     {
+        parent::__construct($drawer);
 
         $this->shape_height = $height;
         $this->render();
