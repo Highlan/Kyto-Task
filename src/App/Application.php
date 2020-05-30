@@ -10,12 +10,14 @@ class Application
 {
     private $agent;
     private $input;
+    private $view;
 
 
     public function __construct(AgentHandler $agent)
     {
         $this->agent = $agent;
         $this->input = $this->agent->handleInput();
+        $this->view = $agent->handleOutput();
 
         $this->run();
 
@@ -23,7 +25,7 @@ class Application
 
     public function run()
     {
-        $drawer = new Drawer();
+        $drawer = new Drawer($this->view);
 
         $diamond  = new Diamond($drawer, $this->input);
         $triangle = new Triangle($drawer, $this->input);
