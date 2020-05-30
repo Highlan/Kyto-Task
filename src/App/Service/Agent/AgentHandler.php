@@ -38,7 +38,7 @@ class AgentHandler
         }
     }
 
-    public function handleOutput()//: IView
+    public function handleOutput(): IView
     {
         try{
             return (new ViewFactory())->build($this->agent);
