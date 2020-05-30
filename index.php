@@ -7,4 +7,3 @@ use App\Service\Agent\AgentHandler;
 
 $handler = new AgentHandler();
 $app = new Application($handler);
-$app->run();
