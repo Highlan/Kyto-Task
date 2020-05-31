@@ -22,7 +22,6 @@ class Diamond extends SymmetricalShapeAbstract
         $this->line_mid_length  = $this->shape_height;
         $this->shape_mid_height = ceil($this->shape_height / 2);
 
-        $this->render();
     }
 
     public function render()

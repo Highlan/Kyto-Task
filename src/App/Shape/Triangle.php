@@ -19,7 +19,6 @@ class Triangle extends SymmetricalShapeAbstract
         $this->shape_width     = (($this->shape_height - 1) * $this->expanded_point_in_each_step * 2) - 1;
         $this->line_mid_length = floor($this->shape_width / 2);
 
-        $this->render();
     }
 
     public function render()

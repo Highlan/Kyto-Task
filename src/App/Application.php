@@ -29,5 +29,8 @@ class Application
 
         $diamond  = new Diamond($drawer, $this->input);
         $triangle = new Triangle($drawer, $this->input);
+
+        $diamond ->render();
+        $triangle->render();
     }
 }
