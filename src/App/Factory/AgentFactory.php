@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Service\Agent;
+namespace App\Factory;
 
 
 use App\Command\GetInput;
+use App\Service\Agent\CliAgent;
+use App\Service\Agent\IAgent;
+use App\Service\Agent\WebAgent;
 use App\Service\FakeData;
 
 class AgentFactory

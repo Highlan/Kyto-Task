@@ -1,7 +1,11 @@
 <?php
 
-namespace App\View;
+namespace App\Factory;
 
+
+use App\View\CliViewRenderer;
+use App\View\IView;
+use App\View\WebViewRenderer;
 
 class ViewFactory
 {

@@ -3,9 +3,9 @@
 namespace App\Service\Agent;
 
 
-use App\Service\IInput;
+use App\Factory\AgentFactory;
 use App\View\IView;
-use App\View\ViewFactory;
+use App\Factory\ViewFactory;
 
 class AgentHandler
 {
@@ -41,7 +41,7 @@ class AgentHandler
     public function handleOutput(): IView
     {
         try{
-            return (new ViewFactory())->build($this->agent);
+            return (new ViewFactory)->build($this->agent);
         }
         catch (\Exception $exception)
         {
