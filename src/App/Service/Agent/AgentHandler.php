@@ -16,8 +16,7 @@ class AgentHandler
 
     public function __construct()
     {
-        if(php_sapi_name() == 'cli')
-        {
+        if(php_sapi_name() == 'cli') {
             $this->agent = self::AGENT_CLI;
         }
         else

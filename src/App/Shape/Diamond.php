@@ -44,8 +44,7 @@ class Diamond extends SymmetricalShapeAbstract
 
             $this->setLineCoordinate($this->expansion_coefficient);
 
-            if ($counter == $this->shape_mid_height - 1)
-            {
+            if ($counter == $this->shape_mid_height - 1) {
                 $border_shape = '+';
             }
 

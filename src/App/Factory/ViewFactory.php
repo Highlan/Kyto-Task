@@ -9,10 +9,9 @@ use App\View\WebViewRenderer;
 
 class ViewFactory
 {
-    public function build ($type = '') : IView
+    public function build($type = '') : IView
     {
-        if($type == '')
-        {
+        if($type == '') {
             throw new \Exception('Invalid view Type!');
         }
         else
@@ -20,8 +19,7 @@ class ViewFactory
 
             $func = 'create' . $type . 'ViewRenderer';
 
-            if(method_exists($this, $func))
-            {
+            if(method_exists($this, $func)) {
                 return $this->$func();
             }
             else

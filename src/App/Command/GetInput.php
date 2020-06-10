@@ -20,8 +20,7 @@ class GetInput implements IInput
             echo "Please choose height among these values (" . implode(', ', HEIGHT_ARRAY_SIZE) . ")? ";
 
             $input = (int)rtrim(fgets(STDIN));
-            if (in_array($input, HEIGHT_ARRAY_SIZE))
-            {
+            if (in_array($input, HEIGHT_ARRAY_SIZE)) {
                 return $input;
             }
             else

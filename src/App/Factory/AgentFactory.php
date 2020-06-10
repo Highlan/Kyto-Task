@@ -11,10 +11,9 @@ use App\Service\FakeData;
 
 class AgentFactory
 {
-    public function build ($type = '') : IAgent
+    public function build($type = '') : IAgent
     {
-        if($type == '')
-        {
+        if($type == '') {
             throw new \Exception('Invalid Agent Type!');
         }
         else
@@ -22,8 +21,7 @@ class AgentFactory
 
             $func = 'create' . $type . 'Agent';
 
-            if(method_exists($this, $func))
-            {
+            if(method_exists($this, $func)) {
                 return $this->$func();
             }
             else

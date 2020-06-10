@@ -23,8 +23,7 @@ class Drawer implements IDrawer
         while ($pointer < $length) {
             $char = $border_shape ?? $this->view->renderWhiteSpace();
 
-            if($this->isPointInRange($first_drawable_point, $last_drawable_point, $pointer))
-            {
+            if($this->isPointInRange($first_drawable_point, $last_drawable_point, $pointer)) {
                 $char = $shape;
             }
 
